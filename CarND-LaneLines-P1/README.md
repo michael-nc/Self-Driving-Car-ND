@@ -38,7 +38,7 @@ In order to draw a single line on the left and right lanes, I modified the given
 
 Result:
 
-[![Demo CountPages alpha](https://j.gifs.com/MZQ03m.gif)](https://www.youtube.com/watch?v=a-kD8Z8A0Uk)
+[![Demo CountPages alpha](test_videos_output/result.gif)](https://www.youtube.com/watch?v=a-kD8Z8A0Uk)
 
 ### 2. Potential Shortcomings
 
