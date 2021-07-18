@@ -1,17 +1,24 @@
-# **Finding Lane Lines on the Road** 
+# **Finding Lane Lines on the Road (Simple)** 
 
-**Finding Lane Lines on the Road**
+**Simple Lane Finding Project**
 
-The goals / steps of this project are the following:
+The goals of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Short report on the overall process and result
 
 
 ---
 
-### Reflection
+### Project Result
+Result:
 
-### 1. My Pipeline
+<p align="center">
+<img src="test_videos_output/solidYellowLeft.gif">
+</p>
+
+Here's a YouTube [link to my video result](https://youtu.be/a-kD8Z8A0Uk)
+
+### Project Pipeline
 
 My pipline consisted of 6 total steps overall:
 
@@ -24,7 +31,9 @@ My pipline consisted of 6 total steps overall:
 
 All the parameter are tuned manually with the help of openCV's GUI trackbars:
 
+<p align="center">
 <img src="examples/gui.png" width="500">
+</p>
 
 
 In order to draw a single line on the left and right lanes, I modified the given `draw_lines()` function by:
@@ -36,17 +45,13 @@ In order to draw a single line on the left and right lanes, I modified the given
 5. Evaluate the polynomial to determine the associated y points for both left and right lanes
 6. Plot the lines by connecting the (x,y) points along the left and right lanes, seperately
 
-Result:
-
-[![Demo CountPages alpha](test_videos_output/result.gif)](https://www.youtube.com/watch?v=a-kD8Z8A0Uk)
-
-### 2. Potential Shortcomings
+### Potential Shortcomings
 
 1. Fails to update correctly to sharp curves
 2. Lane detection jumps around when the curve changes rapidly
 
 
-### 3. Possible Improvements to Pipeline
+### Possible Improvements to Pipeline
 
 1. When encoutering a sharp curve, use polyfit with different polynomial degrees. Create a scoring mechanism to determine which degree fits the best for the upcoming sharp curve. Use polyfit with degree that yields the highest score.
 2. Create some sort of filter that takes the moving average rather than the instaneous result. This way, insteady of the lane detection jumping around, it will only gradually increase or decrease the overall slope.
